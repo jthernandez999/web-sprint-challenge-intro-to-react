@@ -30,11 +30,10 @@ const Article = styled.article`
                     <p>{character.mass}</p>
                     <p>Hair Color:</p>
                     <p>{character.hair_color}</p>
+                    <p>Eye Color:</p>
+                    <p>{character.eye_color}</p>
                     <p>Skin Color:</p>
                     <p>{character.skin_color}</p>
-                    <p>Starships:</p>
-                    <img src={character.starships.link} alt='img'/>
-
                     <FilmList />
         </Article>
     )
