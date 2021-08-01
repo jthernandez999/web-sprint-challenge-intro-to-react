@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import CharacterList from './CharacterList'
+import FilmList from './FilmList'
 
 
 const Character = (props) => {
@@ -32,8 +34,8 @@ const Article = styled.article`
                     <p>{character.skin_color}</p>
                     <p>Starships:</p>
                     <img src={character.starships.link}/>
-
-                    <button >Details</button>
+                    <FilmList />
+                
         </Article>
     )
 }

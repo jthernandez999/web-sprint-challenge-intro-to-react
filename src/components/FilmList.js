@@ -1,17 +1,30 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useState, useEffect } from 'react'
+import Film from './Film'
 
-export default function FilmList(props) {
-    const { character } = props
-    console.log('from FilmList', character.films )
+
+export default function FilmList() {
+
+const [filmData, setFilmData] = useState([])
+
+useEffect(() => {
+            axios
+            .get('https://swapi.dev/api/films')
+            .then(res => {
+                console.log('films data', res.data.results)
+                setFilmData(res.data.results)
+            })
+            .catch(err => console.log(err))
+            },[])
 
     return (
         <div>
-            Films:
-            <ul>
-                {character.films.map((film, idx) => {
-                    return <li key={idx}>{film}</li>
-                })}
-            </ul>
+            
+            {
+                filmData.map((film, index) => (
+                    <Film key={index} film={film} />
+                ))
+            }
         </div>
     )
 }
