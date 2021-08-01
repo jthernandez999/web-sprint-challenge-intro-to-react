@@ -33,7 +33,7 @@ const Article = styled.article`
                     <p>Skin Color:</p>
                     <p>{character.skin_color}</p>
                     <p>Starships:</p>
-                    <img src={character.starships.link}/>
+                    <img src={character.starships.link} alt='img'/>
 
                     <FilmList />
         </Article>
