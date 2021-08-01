@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import styled from 'styled-components'
 import './App.css';
 import Character from './components/Character'
 
@@ -30,10 +31,9 @@ useEffect(() => {
       {
         characters.map( character => {
           console.log('mappped', character)
-          return <Character character={character} characters={characters}/>
+          return <Character character={character} characters={characters} />
         })
-      }
-  
+      } 
     </div>
   );
 }

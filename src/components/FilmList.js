@@ -1,11 +1,17 @@
 import React from 'react'
-import Film from './Film'
 
 export default function FilmList(props) {
-    const { films } = props
+    const { character } = props
+    console.log('from FilmList', character.films )
+
     return (
         <div>
-            {films.map((film) => <Film film={film} />)}
+            Films:
+            <ul>
+                {character.films.map((film, idx) => {
+                    return <li key={idx}>{film}</li>
+                })}
+            </ul>
         </div>
     )
 }
