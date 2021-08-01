@@ -10,13 +10,13 @@ const Character = (props) => {
 
 const Article = styled.article`
     padding: 1rem;
-    width: 300px;
+    width: 325px;
     &:hover {
     background-color: cornsilk;
     opacity: 0.5;  
     }
     border-radius: 1rem;
-    border: 1px dotted black;
+    border: 1px solid black;
 `
 
     return (
@@ -34,8 +34,8 @@ const Article = styled.article`
                     <p>{character.skin_color}</p>
                     <p>Starships:</p>
                     <img src={character.starships.link}/>
+
                     <FilmList />
-                
         </Article>
     )
 }
